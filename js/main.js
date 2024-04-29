@@ -49,7 +49,6 @@ function whoWin(valore1, valore2){
 
 //inizializzo la variable con il button della pagina
 let gameButton = document.getElementById ("gioca-btn");
-let scelta = document.getElementById ("odd-even-select").value;
 
 
 
@@ -73,6 +72,10 @@ gameButton.addEventListener('click', function() {
     let pariOrDispari = oddOrEven(somma);
     console.log(`la somma e' ${pariOrDispari}`);
 
+    //inizializzo la scelta fatta dallo user
+    let scelta = document.getElementById ("odd-even-select").value;
+
+
     //usando la funzione controllo se scelta e il risultato coincidono
     let vincitore = whoWin(pariOrDispari, scelta);
     console.log(vincitore)
@@ -81,6 +84,6 @@ gameButton.addEventListener('click', function() {
     document.getElementById("ins-number").value = '';
 
     //stampo in pagina il vincitore
-   // document.getElementById("winner") .innerHTML += `${vincitore}`;
+    document.getElementById("winner") .innerHTML = `${vincitore}`;
 
 });
