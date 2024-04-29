@@ -21,6 +21,7 @@ function sommaPlayers(num1, num2){
 //inizializzo la variable con il button della pagina
 let gameButton = document.getElementById("gioca-btn")
 
+
 //al click fai cose
 gameButton.addEventListener('click', function() {
 
@@ -30,7 +31,7 @@ gameButton.addEventListener('click', function() {
 
 
 //usando la funzione, genero un numero random da 1 a 6
-let randomNum = parseInt(getRandomNumber(1,6))
+let randomNum = getRandomNumber(1,6)
 console.log(`il numero del computer e' ${randomNum} `)
 
 
@@ -39,7 +40,7 @@ let userNum = parseInt(document.getElementById("ins-number").value)
 console.log(`il numero inserito e' ${userNum} `)
 
 //usando la funzione sommo i due numeri(la funzione non funziona)
-let somma = randomNum + userNum
+let somma = sommaPlayers(randomNum + userNum)
 console.log(somma)
 
 
