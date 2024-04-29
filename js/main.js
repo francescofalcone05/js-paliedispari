@@ -43,9 +43,59 @@ function whoWin(valore1, valore2){
 
 }
 
+/****************************/
+//creo una funzione per controllare che:
+// una parola revers sia uguale a quella precedentemente data
+function isTheSame(word1, word2){
+
+    if (word1 == word2){
+
+        return 'la parola inserita e` palidroma'
+
+    } else {
+
+        return 'la parola inserita non e` palidroma'
+    }
+
+}
 
 
 /**********************************************/ 
+
+
+
+/************** PALIDROMA ****************/
+
+//inizializzo dati al momento con valore vuoto
+let userWord =''
+let reverseWord = ''
+
+
+//con il while non riesco
+//while (userWord != reverseWord) {
+
+    //chiedo di inserire la parola
+    userWord = prompt('Inserisci la tua parola');
+    console.log(userWord, userWord.length)
+    
+    //inverti gli indici della parola tramite ciclo, basandosi sulla length
+    for(i=0; i < userWord.length; i++){
+    
+       //inverti le lettere ad ogni giro
+       reverseWord = userWord.charAt(i) + reverseWord;
+       console.log(reverseWord)
+    
+    }
+    
+    //tramite funzione stabiliamo se la parola inversa e`si puo` leggere come quella originale
+    let yesOrNo = isTheSame(userWord, reverseWord);
+    console.log(yesOrNo)
+    alert(yesOrNo)
+
+//}
+
+
+/************** GIOCO DEI DADI ****************/
 
 //inizializzo la variable con il button della pagina
 let gameButton = document.getElementById ("gioca-btn");
@@ -87,3 +137,5 @@ gameButton.addEventListener('click', function() {
     document.getElementById("winner") .innerHTML = `${vincitore}`;
 
 });
+
+
